@@ -67,7 +67,7 @@ export const useAuth = () => {
   };
 
   const logout = useCallback(() => {
-    tokenService.clearToken();
+    tokenService.clearTokens();
     setUser(null);
     setError(null);
   }, []);

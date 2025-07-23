@@ -1,18 +1,10 @@
-// app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { AuthProvider } from "@/context/AuthContext";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Product Manager",
-    default: "Product Manager",
-  },
-  description: "Manage your products efficiently",
+  title: "Product Manager",
 };
 
 export default function RootLayout({
@@ -21,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body className="min-h-screen bg-gray-50">
         <AuthProvider>
           <Header />
